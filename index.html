@@ -19,27 +19,46 @@
       justify-content: space-between;
       align-items: center;
       border-bottom: 2px solid #8b0000;
+      flex-wrap: wrap;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
     }
     .logo {
       height: 60px;
+      border-radius: 10px;
+      margin-right: 1rem;
+    }
+    .brand-name {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: #8b0000;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      margin-top: 1rem;
     }
     nav a {
       color: white;
       text-decoration: none;
-      margin: 0 1rem;
+      margin: 0.5rem 1rem;
       font-weight: 600;
     }
     .hero {
       text-align: center;
-      padding: 5rem 2rem;
+      padding: 4rem 1.5rem;
       background: linear-gradient(to bottom, #0d0d0d, #1a1a1a);
     }
     .hero h1 {
-      font-size: 3rem;
+      font-size: 2.2rem;
       margin-bottom: 1rem;
     }
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
     }
     .btn {
@@ -50,16 +69,19 @@
       border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
     section {
-      padding: 3rem 2rem;
+      padding: 2rem 1.5rem;
     }
     h2 {
       color: #8b0000;
+      font-size: 1.6rem;
     }
     footer {
       background-color: #1a1a1a;
-      padding: 2rem;
+      padding: 2rem 1.5rem;
       text-align: center;
       font-size: 0.9rem;
       color: #ccc;
@@ -78,11 +100,26 @@
       background: #2a2a2a;
       color: white;
     }
+    ul {
+      padding-left: 1.2rem;
+    }
+    @media (min-width: 768px) {
+      header {
+        flex-wrap: nowrap;
+      }
+      nav {
+        width: auto;
+        margin-top: 0;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="ALPHA BLACK SECURITY.png" alt="Alpha Black Security Logo" class="logo">
+    <div class="logo-container">
+      <img src="ALPHA BLACK SECURITY.png" alt="Alpha Black Security Logo" class="logo">
+      <span class="brand-name">Alpha Black Security</span>
+    </div>
     <nav>
       <a href="#about">Über uns</a>
       <a href="#services">Leistungen</a>
@@ -93,7 +130,7 @@
   <section class="hero">
     <h1>Sicherheit beginnt mit Vertrauen – wir stehen bereit.</h1>
     <p>Professioneller Sicherheitsdienst für Privatpersonen & Events.</p>
-    <button class="btn">Jetzt Sicherheitsdienst anfragen</button>
+    <a href="#contact" class="btn">Jetzt Sicherheitsdienst anfragen</a>
   </section>
 
   <section id="about">
